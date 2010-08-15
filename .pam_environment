@@ -1,0 +1,6 @@
+
+export GOROOT="$HOME/bin/go"
+export GOBIN="$HOME/bin/go/bin"
+export GOOS="linux"
+export GOARCH="amd64"
+

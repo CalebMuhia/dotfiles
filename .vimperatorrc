@@ -1,0 +1,6 @@
+"2.3.1 (created: 2010/04/07 18:56:53)
+
+set runtimepath=/home/kurtosis/.vimperator
+source! /home/kurtosis/.vimperatorrc.local
+
+" vim: set ft=vimperator:

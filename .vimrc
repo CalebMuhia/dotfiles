@@ -36,12 +36,6 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-set nu			" line numbering
-
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
@@ -114,22 +108,44 @@ endif
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
-"set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-"set smartcase		" Do smart case matching
-"set incsearch		" Incremental search
-"set hls		" Highlight search results
-"set autowrite		" Automatically save before commands like :next and :make
-"set hidden             " Hide buffers when they are abandoned
-"set mouse=a		" Enable mouse usage (all modes)
-set tabstop=4
-set shiftwidth=4
+"set mouse=a			" Enable mouse usage (all modes)
+set autoindent			" always set autoindenting on
+set autowrite			" Automatically save before commands like :next and :make
+set copyindent			" copy the previous indentation on autoindenting
+set hidden				" Hide buffers when they are abandoned
+set history=50			" keep 50 lines of command line history
+set ignorecase			" Do case insensitive matching
+set incsearch			" Incremental search: show results as you type
+set nowrap				" Don't wrap lines
+set nu					" line numbering
+set shiftwidth=4		" number of spaces to use for autoindenting
+set shiftround			" use multiple of shiftwidth when indenting
+set showcmd				" Show (partial) command in status line.
+set showmatch			" Show matching brackets.
+set smartcase			" Do smart case matching
+set smarttab			" insert tabs on the start of a line according to shiftwidth, not tabstop
 set softtabstop=4
-set smarttab
-colorscheme zenburn 	" Set colors & scheme
+set ruler				" show the cursor position all the time
+set tabstop=4			" a tab is four spaces
+set undolevels=100		" undo up to 100 commands
+set pastetoggle=<F2>	" use F2 to turn off autoindent when pasting multiple paragraphs
+
+" Set colors & scheme
+colorscheme zenburn 
 colors zenburn
 
+" remap : to ;
+nnoremap ; :
+
+" Use Q for formatting the current paragraph (or selection)
+vmap Q gq
+nmap Q gqap
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " To enable the saving and restoring of screen positions.
 let g:screen_size_restore_pos = 1
@@ -139,3 +155,15 @@ let g:screen_size_restore_pos = 1
 " For all Vim to use the same settings, change this to 0.
 let g:screen_size_by_vim_instance = 1
 syntax on
+
+" Use pathogen to easily modify the runtime path to include all
+" plugins under the ~/.vim/bundle directory
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
+" change the mapleader from \ to ,
+let mapleader=","
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>

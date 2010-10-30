@@ -14,15 +14,17 @@ if v:progname =~? "evim"
   finish
 endif
 
-
 " This line should not be removed as it ensures that various options are
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
 
-" Use Vim settings, rather than Vi settings (much better!).
+" Use Vim settings, rather than Vi settings.
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" Security
+" http://lists.alioth.debian.org/pipermail/pkg-vim-maintainers/2007-June/004020.html
+set modelines=0
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
@@ -71,7 +73,8 @@ if has("autocmd")
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
+  "filetype plugin indent on
+  filetype plugin on
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -92,9 +95,9 @@ if has("autocmd")
 
   augroup END
 
-else
+"else
 
-  set autoindent		" always set autoindenting on
+"	set autoindent		" always set autoindenting on
 
 endif " has("autocmd")
 
@@ -108,27 +111,35 @@ endif
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
-"set mouse=a			" Enable mouse usage (all modes)
-set autoindent			" always set autoindenting on
-set autowrite			" Automatically save before commands like :next and :make
-set copyindent			" copy the previous indentation on autoindenting
-set hidden				" Hide buffers when they are abandoned
-set history=50			" keep 50 lines of command line history
-set ignorecase			" Do case insensitive matching
-set incsearch			" Incremental search: show results as you type
-set nowrap				" Don't wrap lines
-set nu					" line numbering
-set shiftwidth=4		" number of spaces to use for autoindenting
-set shiftround			" use multiple of shiftwidth when indenting
-set showcmd				" Show (partial) command in status line.
-set showmatch			" Show matching brackets.
-set smartcase			" Do smart case matching
-set smarttab			" insert tabs on the start of a line according to shiftwidth, not tabstop
-set softtabstop=4
-set ruler				" show the cursor position all the time
-set tabstop=4			" a tab is four spaces
-set undolevels=100		" undo up to 100 commands
-set pastetoggle=<F2>	" use F2 to turn off autoindent when pasting multiple paragraphs
+"set mouse=a					" Enable mouse usage (all modes)
+set autowrite					" Automatically save before commands like :next and :make
+set backspace=indent,eol,start	" ...
+"set cursorline					" ...
+set gdefault					" applies substitutions globally on lines by default.  To apply only to first word, add g to the end (:%s/foo/bar/g)
+set hidden						" Hide buffers when they are abandoned
+set history=50					" keep 50 lines of command line history
+set ignorecase					" Do case insensitive matching
+set incsearch					" Incremental search: show results as you type
+"set laststatus=2				" ...
+set nowrap						" Don't wrap lines
+set nu							" line numbering
+set shiftwidth=4				" number of spaces to use for autoindenting
+set shiftround					" use multiple of shiftwidth when indenting
+set showcmd						" Show (partial) command in status line.
+set showmatch					" Show matching brackets.
+"set showmode					" ...
+set smartcase					" Do smart case matching
+"set smarttab					" insert tabs on the start of a line according to shiftwidth, not tabstop
+set softtabstop=4				" ...
+set tabstop=4					" a tab is four spaces
+set expandtab
+set ruler						" show the cursor position all the time
+"set ttyfast						" ...
+set undolevels=100				" undo up to 100 commands
+set pastetoggle=<M-F2>			" use F2 to turn off autoindent when pasting multiple paragraphs
+"set visualbell					" ...
+"set wildmenu					" ...
+"set wildmode=list:longest		" ...
 
 " Set colors & scheme
 colorscheme zenburn 
@@ -137,8 +148,24 @@ colors zenburn
 " remap : to ;
 nnoremap ; :
 
+" use Perl/Python regex, not Vim's default regex
+nnoremap / /\v
+vnoremap / /\v
+
+" open a vertical split and switch to it
+nnoremap <leader>w <C-w>v<C-w>l
+
+" move around the split windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" remap Esc to jj in Insert mode
+inoremap jj <ESC>
+
 " Use Q for formatting the current paragraph (or selection)
-vmap Q gq
+"vmap Q gq					" already set above
 nmap Q gqap
 
 " Easy window navigation
@@ -167,3 +194,16 @@ let mapleader=","
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Save when losing focus
+au FocusLost * :wa
+
+" Automatically create .backup directory, writable by the group.
+if filewritable(".") && ! filewritable("vim~")
+  silent execute '!umask 0022; mkdir vim~'
+endif
+
+" Set backup directory to the vim~ directory created above in the current
+" path.  
+set backupdir=./vim~
+set directory=./vim~

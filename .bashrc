@@ -3,7 +3,11 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+# [ -z "$PS1" ] && return
+# Required by RVM: replace the above statement with the following (no return statements allowed in .bashrc by RVM)
+if [[ -n "$PS1" ]] ; then
+	[ -z "$PS1" ] 
+fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
@@ -76,8 +80,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -90,6 +94,10 @@ alias la='ls -sha'
 alias lsa='ls -shal'
 alias lla='ls -shal'
 alias l='ls -CF'
+alias psa='ls -aux'			#all processes
+alias psw='ps -axww'		
+alias pst='ps -axjf'		# all processes in tree form
+alias pss='ps -auxefw'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -112,5 +120,6 @@ export GOROOT="$HOME/bin/go"
 export GOBIN="$HOME/bin/go/bin"
 export GOOS="linux"
 export GOARCH="amd64"
-export PATH="$PATH:$HOME/bin/go:$HOME/bin/go/bin"
+export PATH="$PATH:$HOME/bin/go:$HOME/bin/go/bin:$HOME/bin/racket/bin"
+
 

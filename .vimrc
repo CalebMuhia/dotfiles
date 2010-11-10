@@ -66,6 +66,12 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" Use pathogen to easily modify the runtime path to include all
+" plugins under the ~/.vim/bundle directory
+" Note: Pathogen functions must be invoked before 'filetype plugin indent on'
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
@@ -183,11 +189,6 @@ let g:screen_size_restore_pos = 1
 " For all Vim to use the same settings, change this to 0.
 let g:screen_size_by_vim_instance = 1
 syntax on
-
-" Use pathogen to easily modify the runtime path to include all
-" plugins under the ~/.vim/bundle directory
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
 
 " change the mapleader from \ to ,
 let mapleader=","

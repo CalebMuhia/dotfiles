@@ -69,8 +69,8 @@ endif
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
 " Note: Pathogen functions must be invoked before 'filetype plugin indent on'
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+" call pathogen#helptags()
+" call pathogen#runtime_append_all_bundles()
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -80,7 +80,8 @@ if has("autocmd")
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
   "filetype plugin indent on
-  filetype plugin on
+  filetype plugin indent on
+  filetype on
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -142,10 +143,12 @@ set expandtab
 set ruler						" show the cursor position all the time
 "set ttyfast						" ...
 set undolevels=100				" undo up to 100 commands
-set pastetoggle=<M-F2>			" use F2 to turn off autoindent when pasting multiple paragraphs
+"set pastetoggle=<M-F2>			" use F2 to turn off autoindent when pasting multiple paragraphs
+set pastetoggle=<F8>
 "set visualbell					" ...
 "set wildmenu					" ...
 "set wildmode=list:longest		" ...
+set si                          " smart indent http://stackoverflow.com/questions/3626203/text-editor-for-scala
 runtime ftplugin/man.vim        " Turn on Man pages
 
 " Set colors & scheme
@@ -188,7 +191,9 @@ let g:screen_size_restore_pos = 1
 " This is useful if you routinely run more than one Vim instance.
 " For all Vim to use the same settings, change this to 0.
 let g:screen_size_by_vim_instance = 1
+syntax enable
 syntax on
+syn on
 
 " change the mapleader from \ to ,
 let mapleader=","

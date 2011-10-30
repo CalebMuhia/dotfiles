@@ -18,6 +18,8 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
+    ##PATH="$PATH:/usr/bin/java"
+    ##PATH="$PATH:/usr/bin/scala"
     PATH="$PATH:$HOME/bin"
     PATH="$PATH:$HOME/bin/Go/go/bin"
     PATH="$PATH:$HOME/bin/Google/Android/sdk/tools"
@@ -27,6 +29,8 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # Export additional env vars
+#export JAVA_HOME=/usr/bin/java/
+#export SCALA_HOME=/usr/bin/scala/
 export ANDROID_SDK=$HOME/bin/Google/Android/sdk/
 
 # Node paths from manual make install of node

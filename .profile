@@ -26,7 +26,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$PATH:."
 fi
 
-
+# Export additional env vars
+export ANDROID_SDK=$HOME/bin/Google/Android/sdk/
 
 # Node paths from manual make install of node
 # export PATH=$HOME/bin/Servers/Node/bin/node:$PATH

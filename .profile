@@ -22,7 +22,7 @@ if [ -d "$HOME/bin" ] ; then
     ##PATH="$PATH:/usr/bin/scala"
     PATH="$PATH:$HOME/bin"
     PATH="$PATH:$HOME/bin/Go/go/bin"
-    PATH="$PATH:$HOME/bin/Utitilities/Apache/Ant/bin/"
+    PATH="$PATH:$HOME/bin/Utilities/Apache/Ant/bin/"
     PATH="$PATH:$HOME/bin/Google/Android/sdk/tools"
     PATH="$PATH:$HOME/bin/Google/Android/sdk/platform-tools"
     PATH="$PATH:/usr/local/rvm/bin"

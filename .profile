@@ -32,7 +32,7 @@ fi
 # Export additional env vars
 export JAVA_HOME=/usr/lib/jvm/default-java/
 #export SCALA_HOME=/usr/bin/scala/
-export ANT_HOME=$HOME/bin/Utitilities/Apache/Ant/
+export ANT_HOME=$HOME/bin/Utilities/Apache/Ant/
 export ANDROID_SDK=$HOME/bin/Google/Android/sdk/
 
 # Node paths from manual make install of node

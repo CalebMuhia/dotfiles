@@ -22,6 +22,7 @@ if [ -d "$HOME/bin" ] ; then
     ##PATH="$PATH:/usr/bin/scala"
     PATH="$PATH:$HOME/bin"
     PATH="$PATH:$HOME/bin/Go/go/bin"
+    PATH="$PATH:$HOME/bin/Utitilities/Apache/Ant/bin/"
     PATH="$PATH:$HOME/bin/Google/Android/sdk/tools"
     PATH="$PATH:$HOME/bin/Google/Android/sdk/platform-tools"
     PATH="$PATH:/usr/local/rvm/bin"
@@ -29,7 +30,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # Export additional env vars
-#export JAVA_HOME=/usr/bin/java/
+export JAVA_HOME=/usr/lib/jvm/default-java/
 #export SCALA_HOME=/usr/bin/scala/
 export ANT_HOME=$HOME/bin/Utitilities/Apache/Ant/
 export ANDROID_SDK=$HOME/bin/Google/Android/sdk/

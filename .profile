@@ -21,19 +21,19 @@ if [ -d "$HOME/bin" ] ; then
     ##PATH="$PATH:/usr/bin/java"
     ##PATH="$PATH:/usr/bin/scala"
     PATH="$PATH:$HOME/bin"
-    PATH="$PATH:$HOME/bin/Go/go/bin"
-    PATH="$PATH:$HOME/bin/Utilities/Apache/Ant/bin/"
-    PATH="$PATH:$HOME/bin/Google/Android/sdk/tools"
-    PATH="$PATH:$HOME/bin/Google/Android/sdk/platform-tools"
+    PATH="$PATH:$HOME/bin/google/go/bin"
+    PATH="$PATH:$HOME/bin/utilities/apache/ant/bin/"
+    PATH="$PATH:$HOME/Projects/Google/Android/sdk/tools"
+    PATH="$PATH:$HOME/Projects/Google/Android/sdk/platform-tools"
     PATH="$PATH:/usr/local/rvm/bin"
     PATH="$PATH:."
 fi
 
 # Export additional env vars
-export JAVA_HOME=/usr/lib/jvm/default-java/
+export JAVA_HOME=/usr/lib/jvm/default-java
 #export SCALA_HOME=/usr/bin/scala/
-export ANT_HOME=$HOME/bin/Utilities/Apache/Ant/
-export ANDROID_SDK=$HOME/bin/Google/Android/sdk/
+export ANT_HOME=$HOME/bin/utilities/apache/ant/
+export ANDROID_SDK=$HOME/bin/google/android/sdk/
 
 # Node paths from manual make install of node
 # export PATH=$HOME/bin/Servers/Node/bin/node:$PATH

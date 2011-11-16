@@ -18,11 +18,11 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    ##PATH="$PATH:/usr/bin/java"
-    ##PATH="$PATH:/usr/bin/scala"
+    ##PATH="$PATH:/usr/lib/jvm/default-java/bin"
+    PATH="$PATH:/usr/local/typesafe-stack/bin"
     PATH="$PATH:$HOME/bin"
     PATH="$PATH:$HOME/bin/google/go/bin"
-    PATH="$PATH:$HOME/bin/utilities/apache/ant/bin/"
+    PATH="$PATH:$HOME/bin/utilities/apache/ant/bin"
     PATH="$PATH:$HOME/Projects/Google/Android/sdk/tools"
     PATH="$PATH:$HOME/Projects/Google/Android/sdk/platform-tools"
     PATH="$PATH:/usr/local/rvm/bin"
@@ -31,7 +31,7 @@ fi
 
 # Export additional env vars
 export JAVA_HOME=/usr/lib/jvm/default-java
-#export SCALA_HOME=/usr/bin/scala/
+export SCALA_HOME=/usr/local/typesafe-stack/
 export ANT_HOME=$HOME/bin/utilities/apache/ant/
 export ANDROID_SDK=$HOME/bin/google/android/sdk/
 

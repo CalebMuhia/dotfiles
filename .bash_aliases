@@ -10,3 +10,9 @@ alias gaa='git add -A'
 alias gcm='git commit -m'
 alias gst='git status'
 alias gpom='git push -u origin master'
+
+
+alias cd-android="cd ~/Projects/Google/Android/sdk/"
+alias cd-haskell="cd ~/Projects/Haskell/"
+alias cd-lyah="cd ~/Projects/Haskell/LYaH/"
+

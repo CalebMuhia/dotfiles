@@ -15,6 +15,7 @@ alias gaa='git add -A'
 alias gcm='git commit -m'
 alias gst='git status'
 alias gpom='git push -u origin master'
+alias gpum='git pull upstream master'
 
 
 alias cd-android="cd ~/Projects/Google/Android/sdk/"

@@ -20,6 +20,7 @@ fi
 if [ -d "$HOME/bin" ] ; then
     ##PATH="$PATH:/usr/lib/jvm/default-java/bin"
     PATH="$PATH:/usr/local/typesafe-stack/bin"
+    PATH="$PATH:~/.cabal/bin"
     PATH="$PATH:$HOME/bin"
     PATH="$PATH:$HOME/bin/google/go/bin"
     PATH="$PATH:$HOME/bin/utilities/apache/ant/bin"

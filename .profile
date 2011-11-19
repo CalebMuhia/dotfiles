@@ -31,8 +31,8 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # Export additional env vars
-export JAVA_HOME=/usr/lib/jvm/default-java
-export SCALA_HOME=/usr/local/typesafe-stack/
+export JAVA_HOME=/usr/lib/jvm/default-java/
+export SCALA_HOME=/usr/local/typesafe-stack/scala/
 export ANT_HOME=$HOME/bin/utilities/apache/ant/
 export ANDROID_SDK=$HOME/bin/google/android/sdk/
 

@@ -82,6 +82,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # configure virtualenvwrapper
+# http://mirnazim.org/writings/python-ecosystem-introduction/
 if [ `id -u` != '0' ]; then
   export VIRTUALENV_USE_DISTRIBUTE = 1        # <-- Always use pip/distribute
   export WORKON_HOME=$HOME/bin/virtualenvs       # <-- Where all virtualenvs will be stored

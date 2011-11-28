@@ -81,6 +81,15 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# configure virtualenvwrapper
+if [ `id -u` != '0' ]; then
+  export VIRTUALENV_USE_DISTRIBUTE = 1        # <-- Always use pip/distribute
+  export WORKON_HOME=$HOME/bin/virtualenvs       # <-- Where all virtualenvs will be stored
+  source /usr/local/bin/virtualenvwrapper.sh
+  export PIP_VIRTUALENV_BASE = $WORKON_HOME
+  export PIP_RESPECT_VIRTUALENV = true
+fi
+
 # some more ls aliases (all in .bash_aliases)
 #alias lla='ls -alF'
 #alias la='ls -A'

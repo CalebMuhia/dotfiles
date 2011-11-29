@@ -84,11 +84,11 @@ fi
 # configure virtualenvwrapper
 # http://mirnazim.org/writings/python-ecosystem-introduction/
 if [ `id -u` != '0' ]; then
-  export VIRTUALENV_USE_DISTRIBUTE = 1        # <-- Always use pip/distribute
+  export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
   export WORKON_HOME=$HOME/bin/virtualenvs       # <-- Where all virtualenvs will be stored
   source /usr/local/bin/virtualenvwrapper.sh
-  export PIP_VIRTUALENV_BASE = $WORKON_HOME
-  export PIP_RESPECT_VIRTUALENV = true
+  export PIP_VIRTUALENV_BASE=$WORKON_HOME
+  export PIP_RESPECT_VIRTUALENV=true
 fi
 
 # some more ls aliases (all in .bash_aliases)

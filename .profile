@@ -20,6 +20,7 @@ fi
 export JAVA_HOME=/usr/lib/jvm/default-java
 export SCALA_HOME=/usr/local/typesafe-stack
 export HASKELL_HOME=/opt/haskell/ghc/7.0.4
+export HASKELL_PLATFORM=/opt/haskell/platform/2011.4.0.0
 export ANT_HOME=$HOME/bin/apache/ant/1.8.2
 export MAVEN_HOME=$HOME/bin/apache/maven/2.2.1
 export ANDROID_SDK=$HOME/bin/google/android/sdk
@@ -37,6 +38,7 @@ PATH="$PATH:$SCALA_HOME/bin"
 PATH="$PATH:$ANDROID_HOME/tools"
 PATH="$PATH:$ANDROID_HOME/platform-tools"
 PATH="$PATH:$HASKELL_HOME/bin"
+PATH="$PATH:$HASKELL_PLATFORM/bin"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then

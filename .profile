@@ -19,10 +19,11 @@ fi
 # Export additional env vars
 export JAVA_HOME=/usr/lib/jvm/default-java
 export SCALA_HOME=/usr/local/typesafe-stack
+export HASKELL_HOME=/opt/haskell/ghc/7.0.4
 export ANT_HOME=$HOME/bin/apache/ant/1.8.2
 export MAVEN_HOME=$HOME/bin/apache/maven/2.2.1
 export ANDROID_SDK=$HOME/bin/google/android/sdk
-export ANDROID_NDK=$HOME/bin/google/android/ndk/r7
+export ANDROID_NDK=$HOME/bin/google/android/ndk/r7 
 export ECLIPSE_HOME=$HOME/bin/ide/eclipse
 
 # make a GNU Stow env variable so you can refer to it in ./configure $STOW/appname
@@ -35,14 +36,10 @@ PATH="$PATH:$ECLIPSE_HOME"
 PATH="$PATH:$SCALA_HOME/bin"
 PATH="$PATH:$ANDROID_HOME/tools"
 PATH="$PATH:$ANDROID_HOME/platform-tools"
+PATH="$PATH:$HASKELL_HOME/bin"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$PATH:$HOME/bin"
-    PATH="$PATH:."
-fi
+    PATH="$PATH:$HOME/bin" PATH="$PATH:." 
+fi 
 
-#PATH="$PATH:$HOME/bin/google/go/bin"
-#PATH="$PATH:$HOME/bin/utilities/apache/ant/bin"
-#PATH="$PATH:$HOME/.cabal/bin"
-#PATH="$PATH:/usr/local/rvm/bin"

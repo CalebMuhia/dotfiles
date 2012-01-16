@@ -5,6 +5,7 @@ alias ll='ls -l --group-directories-first --color'
 alias la='ls -A --group-directories-first --color'
 alias l='ls -CF --group-directories-first --color'
 alias llg='ls -alF --group-directories-first --color|grep'
+alias llm='ls -alF --group-directories-first --color|more'
 
 alias tmux='tmux -2'
 

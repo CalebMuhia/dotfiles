@@ -63,3 +63,8 @@ DEADJOE
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# # Document Types #
+# ######################
+*.pdf
+*.doc*

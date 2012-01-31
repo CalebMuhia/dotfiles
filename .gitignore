@@ -76,6 +76,14 @@ Icon?
 Thumbs.db
 .DS_Store
 
+# # Haskell #
+# ###########
+cabal-dev
+dist
+.static-cache
+static/tmp
+.sqlite3
+
 # # Misc #
 # ########
 build
@@ -84,12 +92,5 @@ build
 *.mode1v3
 *.perspective
 *.perspectivev3
-
-# # Haskell #
-# ###########
-cabal-dev
-dist
-.static-cache
-static/tmp
-.sqlite3
+.oh-my-zsh
 

@@ -40,10 +40,12 @@ PATH="$PATH:$ANDROID_HOME/tools"
 PATH="$PATH:$ANDROID_HOME/platform-tools"
 PATH="$PATH:$HASKELL_HOME/bin"
 PATH="$PATH:$HASKELL_PLATFORM/bin"
-PATH="$PATH:RBENV_HOME/bin"
+PATH="$PATH:$RBENV_HOME/bin"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$PATH:$HOME/bin" PATH="$PATH:." 
 fi 
 
+# enable rbenv shims and autocompletion
+eval "$(rbenv init -)"

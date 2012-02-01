@@ -9,7 +9,6 @@ alias llm='ls -alF --group-directories-first --color|more'
 
 alias tmux='tmux -2'
 
-
 alias gcn='git clone'
 alias ga='git add'
 alias gaa='git add -A'
@@ -17,7 +16,6 @@ alias gcm='git commit -m'
 alias gst='git status'
 alias gpom='git push -u origin master'
 alias gpum='git pull upstream master'
-
 
 alias cd-android="cd ~/Projects/Google/Android/sdk/"
 alias cd-haskell-proj="cd ~/Projects/Haskell/"

@@ -73,9 +73,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -90,11 +89,6 @@ fi
 #  export PIP_VIRTUALENV_BASE=$WORKON_HOME
 #  export PIP_RESPECT_VIRTUALENV=true
 #fi
-
-# some more ls aliases (all in .bash_aliases)
-#alias lla='ls -alF'
-#alias la='ls -A'
-#alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

@@ -26,6 +26,7 @@ export MAVEN_HOME=/opt/apache/maven/2.2.1
 export ANDROID_SDK=$HOME/bin/google/android/sdk
 export ANDROID_NDK=$HOME/bin/google/android/ndk/r7 
 export ECLIPSE_HOME=$HOME/bin/ide/eclipse
+export RBENV_HOME=$HOME/.rbenv
 
 # make a GNU Stow env variable so you can refer to it in ./configure $STOW/appname
 export STOW=/usr/local/stow
@@ -39,6 +40,7 @@ PATH="$PATH:$ANDROID_HOME/tools"
 PATH="$PATH:$ANDROID_HOME/platform-tools"
 PATH="$PATH:$HASKELL_HOME/bin"
 PATH="$PATH:$HASKELL_PLATFORM/bin"
+PATH="$PATH:RBENV_HOME/bin"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then

@@ -27,7 +27,7 @@ export ANDROID_SDK=$HOME/bin/google/android/sdk
 export ANDROID_NDK=$HOME/bin/google/android/ndk/r7 
 export ECLIPSE_HOME=$HOME/bin/ide/eclipse
 export RBENV_HOME=$HOME/.rbenv
-export GOROOT=$HOME/bin/go
+export GOROOT=$HOME/bin/google/go
 export GOBIN=$GOROOT/bin
 
 # make a GNU Stow env variable so you can refer to it in ./configure $STOW/appname

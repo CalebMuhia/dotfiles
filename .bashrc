@@ -4,10 +4,6 @@
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
-# Replace above line with if/then/fi for RVM compatibility
-#if [[ -n "$PS1" ]] ; then 
-#do nothing
-#fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -80,15 +76,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# configure virtualenvwrapper
-# http://mirnazim.org/writings/python-ecosystem-introduction/
-#if [ `id -u` != '0' ]; then
-#  export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
-#  export WORKON_HOME=$HOME/bin/virtualenvs       # <-- Where all virtualenvs will be stored
-#  source /usr/local/bin/virtualenvwrapper.sh
-#  export PIP_VIRTUALENV_BASE=$WORKON_HOME
-#  export PIP_RESPECT_VIRTUALENV=true
-#fi
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

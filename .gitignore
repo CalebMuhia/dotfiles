@@ -84,6 +84,16 @@ dist
 static/tmp
 .sqlite3
 
+# # Private #
+# ###########
+.ssh
+ssh
+id_rsa
+id_dsa
+identity
+.gitconfig
+.gitconfig*
+
 # # Misc #
 # ########
 build

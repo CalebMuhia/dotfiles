@@ -81,6 +81,14 @@ Thumbs.db
 *.pdf
 *.doc*
 
+# # Private #
+# ###########
+.ssh
+ssh
+id_rsa
+id_dsa
+identity
+
 # # Misc #
 # ########
 build
@@ -89,3 +97,5 @@ build
 *.mode1v3
 *.perspective
 *.perspectivev3
+
+

@@ -16,16 +16,18 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-export JAVA_HOME=/usr/lib/jvm/default-java
-export SCALA_HOME=/usr/local/typesafe-stack
+export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_30
+export SCALA_HOME=/opt/scala/typesafe-stack
 export ANT_HOME=/opt/apache/ant/1.8.2
 export MAVEN_HOME=/opt/apache/maven/2.2.1
+export SBT_HOME=/opt/sbt
 
 #don't need $JAVA_HOME/bin in path since update-alteratives links it to /usr/bin
 #PATH="$PATH:$JAVA_HOME/bin"
 PATH="$PATH:$SCALA_HOME/bin"
 PATH="$PATH:$ANT_HOME/bin"
 PATH="$PATH:$MAVEN_HOME/bin" 
+PATH="$PATH:$SBT_HOME"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then

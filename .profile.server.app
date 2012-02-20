@@ -20,7 +20,7 @@ export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_30
 export SCALA_HOME=/opt/scala/typesafe-stack
 export ANT_HOME=/opt/apache/ant/1.8.2
 export MAVEN_HOME=/opt/apache/maven/2.2.1
-export SBT_HOME=/opt/sbt
+export SBT_HOME=~/bin/build/sbt
 
 #don't need $JAVA_HOME/bin in path since update-alteratives links it to /usr/bin
 #PATH="$PATH:$JAVA_HOME/bin"

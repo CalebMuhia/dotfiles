@@ -17,18 +17,21 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Export additional env vars
-export JAVA_HOME=/usr/lib/jvm/default-java
+#export JAVA_HOME=/usr/lib/jvm/default-java
+export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_30
 export SCALA_HOME=/usr/local/typesafe-stack
 export HASKELL_HOME=/opt/haskell/ghc/7.0.4
 export HASKELL_PLATFORM=/opt/haskell/platform/2011.4.0.0
 export ANT_HOME=/opt/apache/ant/1.8.2
-export MAVEN_HOME=/opt/apache/maven/2.2.1
+#export MAVEN_HOME=/opt/apache/maven/2.2.1
+export MAVEN_HOME=/opt/apache/maven/3.0.3
 export ANDROID_SDK=$HOME/bin/google/android/sdk
 export ANDROID_NDK=$HOME/bin/google/android/ndk/r7 
 export ECLIPSE_HOME=$HOME/bin/ide/eclipse
 export RBENV_HOME=$HOME/.rbenv
 export GOROOT=$HOME/bin/google/go
 export GOBIN=$GOROOT/bin
+export LESSCSS=$HOME/bin/node/node_modules/less
 
 # make a GNU Stow env variable so you can refer to it in ./configure $STOW/appname
 export STOW=/usr/local/stow
@@ -44,6 +47,7 @@ PATH="$PATH:$HASKELL_HOME/bin"
 PATH="$PATH:$HASKELL_PLATFORM/bin"
 PATH="$PATH:$RBENV_HOME/bin"
 PATH="$PATH:$GOBIN"
+PATH="$PATH:$LESSCSS/bin"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then

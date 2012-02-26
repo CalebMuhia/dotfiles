@@ -1,0 +1,17 @@
+
+
+http://news.ycombinator.com/item?id=3612140
+
+You might also want to look into running emacs as a daemon, if you haven't already. 
+Since it runs as a server in the background (with a grand total of maybe 30MB used 
+in my case), clients pop up instantly and if there were buffers open on the server 
+from before, they will remain open even if you close the client's window. If you 
+start/close emacs more often, it's definitely a nice thing to have.
+
+  emacs --daemon
+
+clients are called using either
+
+  emacsclient (for either terminal client or gtk/x11 client)
+  emacsclient -c (to open a new frame)
+  emacsclient -t (to open a frame in the current terminal)

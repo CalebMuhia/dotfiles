@@ -6,6 +6,7 @@ alias llg='ls -alF --group-directories-first --color|grep'
 alias llm='ls -alF --group-directories-first --color|more'
 
 alias vm='vim'
+alias emacs='emacs -nw'
 alias tmux='tmux -2'
 
 alias gcn='git clone'

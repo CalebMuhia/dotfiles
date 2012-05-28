@@ -1,0 +1,13 @@
+[user]
+	name = Byron Gibson
+	email = fbg111@gmail.com
+[github]
+	user = byrongibson
+[core]
+	excludesfile = /home/kurtosis/.gitignore_global
+[alias]
+#   unstage = reset HEAD
+    unstage = rm -r --cached
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3

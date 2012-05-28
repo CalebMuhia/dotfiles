@@ -85,6 +85,11 @@ dist
 static/tmp
 .sqlite3
 
+# # Document Types #
+# ######################
+*.pdf
+*.doc*
+
 # # Private #
 # ###########
 .ssh
@@ -92,8 +97,6 @@ ssh
 id_rsa
 id_dsa
 identity
-.gitconfig
-.gitconfig*
 *private*
 
 # # Misc #

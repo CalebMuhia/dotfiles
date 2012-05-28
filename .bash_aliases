@@ -13,16 +13,16 @@ alias vom='vim'
 alias emacs='emacs -nw'
 alias tmux='tmux -2'
 
-alias gcn='git clone --recursive'
-alias ga='git add -v'
-alias gaa='git add -Av'
+alias gcn='git clone'
+alias ga='git add'
+alias gaa='git add -A'
 alias gcm='git commit -m'
 alias gst='git status'
-alias gpom='git push -u -v --progress origin master'
+alias gpom='git push -u origin master'
 alias gpum='git pull upstream master'
 alias gfum='git fetch upstream master'
 alias gp='git pull'
-alias gf='git fetch'
+alias gf='git fetch
 
 alias rsync='rsync --verbose  --progress --stats --compress --recursive --times --perms --links exclude "*bak" --exclude "*~*"'
 alias cd-android="cd ~/Projects/Google/Android/sdk/"

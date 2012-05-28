@@ -10,14 +10,17 @@
 # be disabled and audio files will only be accepted over ipc socket (using
 # file:// protocol) or streaming files over an accepted protocol.
 #
-#music_directory		"/var/lib/mpd/music"
-music_directory		    "/home/kurtosis/Music/Library"
-#music_directory		"/home/kurtosis/.mpd/music"
+#music_directory	"/var/lib/mpd/music"
+music_directory     "/home/kurtosis/Music/Library"
+#music_directory    "/home/kurtosis/.mpd/music"
 #
 # This setting sets the MPD internal playlist directory. The purpose of this
 # directory is storage for playlists created by MPD. The server will use 
 # playlist files not created by the server but only if they are in the MPD
 # format. This setting defaults to playlist saving being disabled.
+#
+# Recommedation: use /home/kurtosis/Music/... path for playlists, since that is
+# the path mpd will save new music files to new .m3u files with.
 #
 #playlist_directory		"/var/lib/mpd/playlists"
 playlist_directory		"/home/kurtosis/Music/Playlists"
@@ -93,6 +96,7 @@ bind_to_address		"localhost"
 #
 # And for Unix Socket
 #bind_to_address		"/var/run/mpd/socket"
+#bind_to_address		"/home/kurtosis/.mpd/var/run/mpd/socket"
 #
 # This setting is the TCP port that is desired for the daemon to get assigned
 # to.
@@ -117,13 +121,13 @@ port				"6600"
 # This setting enables MPD to create playlists in a format usable by other
 # music players.
 #
-#save_absolute_paths_in_playlists	"no"
+save_absolute_paths_in_playlists	"yes"
 #
 # This setting defines a list of tag types that will be extracted during the 
 # audio file discovery process. Optionally, 'comment' can be added to this
 # list.
 #
-#metadata_to_use	"artist,album,title,track,name,genre,date,composer,performer,disc"
+#metadata_to_use	"artist,album,title,track,name,genre,date,composer,performer,disc,comment"
 #
 # This setting enables automatic update of MPD's database when files in 
 # music_directory are changed.
@@ -440,3 +444,4 @@ id3v1_encoding			"UTF-8"
 #
 ###############################################################################
 
+>>>>>>> 989efafe9619c3d50d93178a0f8f7650eafc4c4a

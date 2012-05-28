@@ -1,0 +1,19 @@
+[user]
+	name = Byron Gibson
+	email = fbg111@gmail.com
+[github]
+	user = byrongibson
+[core]
+	excludesfile = /home/kurtosis/.gitignore_global
+[alias]
+    add = add -v
+    clone = clone -v --progress --recursive
+    fetch = fetch -v --progress
+    push = push -v --progress
+    pull = pull -v --progress
+    status = status -v
+    unstage = rm -r --cached
+#   unstage = reset HEAD
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3

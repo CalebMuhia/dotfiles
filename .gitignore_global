@@ -23,6 +23,7 @@ lvm/cache
 
 # editor temp files
 *~
+vim~
 .*.sw?
 .sw?
 #*#
@@ -76,6 +77,14 @@ Icon?
 Thumbs.db
 .DS_Store
 
+# # Haskell #
+# ###########
+cabal-dev
+dist
+.static-cache
+static/tmp
+.sqlite3
+
 # # Document Types #
 # ######################
 *.pdf
@@ -88,8 +97,7 @@ ssh
 id_rsa
 id_dsa
 identity
-.gitconfig
-.gitconfig*
+*private*
 
 # # Misc #
 # ########
@@ -99,5 +107,5 @@ build
 *.mode1v3
 *.perspective
 *.perspectivev3
-
-
+.oh-my-zsh
+git-rm*

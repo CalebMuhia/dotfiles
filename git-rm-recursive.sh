@@ -1,1 +1,0 @@
-../scripts/git-rm-recursive.sh

@@ -24,7 +24,7 @@ alias gpom='git push -u origin master'
 alias gpum='git pull upstream master'
 alias gfum='git fetch upstream master'
 alias gp='git pull'
-alias gf='git fetch
+alias gf='git fetch'
 
 alias cd-android="cd ~/Projects/Google/Android/sdk/"
 alias cd-haskell-proj="cd ~/Projects/Haskell/"

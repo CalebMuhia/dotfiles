@@ -93,7 +93,6 @@ static/tmp
 # # Private #
 # ###########
 .ssh
-ssh
 id_rsa
 id_dsa
 identity

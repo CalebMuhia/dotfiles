@@ -1,3 +1,4 @@
+alias mkdir='mkdir -p'
 alias more='less -R'
 alias chown='chown -RV'
 alias chmod='chomod -RV'

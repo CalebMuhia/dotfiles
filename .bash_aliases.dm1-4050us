@@ -1,7 +1,11 @@
+alias mkdir='mkdir -p'
 alias more='less -R'
+alias chown='chown -RV'
+alias chmod='chomod -RV'
 alias grep='grep --color=always'
 alias diff='colordiff'
 alias emacs='emacs -nw'
+alias tar='tar --verbose'
 alias tmux='tmux -2'
 alias rsync='rsync --verbose  --progress --stats --compress --recursive --times --perms --links exclude "*bak" --exclude "*~*"'
 

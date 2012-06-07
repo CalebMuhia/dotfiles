@@ -23,6 +23,7 @@ alias gcn='git clone'
 alias ga='git add'
 alias gaa='git add -A'
 alias gcm='git commit -m'
+alias gcmu="git commit -m 'update'"
 alias gst='git status'
 alias gpom='git push -u origin master'
 alias gpum='git pull upstream master'

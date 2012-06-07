@@ -22,17 +22,16 @@ if [ -d "$HOME/bin" ] ; then
 fi 
 
 # Export additional env vars
-#export JAVA_HOME=/usr/lib/jvm/default-java/
-export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_30
-export SCALA_HOME=/opt/scala/bin/default
-export SCALA_DOCS=/opt/scala/docs/default
-export TYPESAFE_STACK=/opt/typesafe-stack
+export JAVA_HOME=/opt/java/jdk/default
+export TYPESAFE_HOME=/opt/scala/typesafe/stack/default
+export TYPESAFE_DOCS=$TYPESAFE_HOME/doc
+export SCALA_HOME=$TYPESAFE_HOME
+export SCALA_DOCS=$TYPESAFE_DOCS
 export ANT_HOME=/opt/apache/ant/default
-#export ANT_HOME=$HOME/bin/utilities/apache/ant
 export CABAL_HOME=$HOME/.cabal
 export MAVEN_HOME=/opt/apache/maven/default
 export IDEA_HOME=$HOME/bin/ide/idea/default
-export ECLIPSE_HOME=$HOME/bin/ide/eclipse
+export ECLIPSE_HOME=$HOME/bin/ide/eclipse/indigo
 export ANDROID_SDK=$HOME/bin/google/android/sdk
 export ANDROID_NDK=$HOME/bin/google/android/ndk/default
 export HASKELL_HOME=/opt/haskell
@@ -40,13 +39,13 @@ export HASKELL_GHC=$HASKELL_HOME/ghc/default
 export HASKELL_PLATFORM=$HASKELL_HOME/platform/default
 export RBENV_HOME=$HOME/bin/ruby/rbenv
 export RBENV_ROOT=$HOME/bin/ruby/rbenv
-#export RVM_HOME=/usr/local/rvm
 export GO_HOME=$HOME/bin/google/go
 export GOBIN=$GO_HOME/bin
 export LESSCSS=$HOME/bin/node/node_modules/less
 export VUZE_HOME=$HOME/bin/utilities/torrent/vuze
 export ANOMOS_HOME=$HOME/bin/utilities/torrent/anomos
 export USER_SCRIPTS=$HOME/bin/scripts
+
 # to make tribler work on 12.04:
 export PYTHONPATH="$PYTHONPATH":/usr/lib/python2.7/dist-packages/wx-2.8-gtk2-unicode/
 
@@ -58,20 +57,22 @@ PATH="$PATH:$ANT_HOME/bin"
 PATH="$PATH:$MAVEN_HOME/bin" 
 PATH="$PATH:$ECLIPSE_HOME"
 PATH="$PATH:$IDEA_HOME/bin"
-PATH="$PATH:$SCALA_HOME/bin"
-PATH="$PATH:$TYPESAFE_STACK/bin"
 PATH="$PATH:$ANDROID_SDK/tools"
 PATH="$PATH:$ANDROID_SDK/platform-tools"
 PATH="$PATH:$ANDROID_NDK/"
-PATH="$PATH:$HASKELL_GHC/bin"
-PATH="$PATH:$HASKELL_PLATFORM/bin"
 PATH="$PATH:$RBENV_ROOT/bin"
-#PATH="$PATH:$RVM_HOME/bin"
 PATH="$PATH:$LESSCSS/bin"
 PATH="$PATH:$GOBIN"
 PATH="$PATH:$VUZE_HOME"
 PATH="$PATH:$ANOMOS_HOME"
 PATH="$PATH:$USER_SCRIPTS"
+
+# the following are automatically inserted into the system path /usr/bin by 
+# update-alternatives
+#PATH="$PATH:$SCALA_HOME/bin"
+#PATH="$PATH:$TYPESAFE_STACK/bin"
+#PATH="$PATH:$HASKELL_GHC/bin"
+#PATH="$PATH:$HASKELL_PLATFORM/bin"
 
 # enable rbenv shims and autocompletion
 eval "$(rbenv init -)"

@@ -6,14 +6,10 @@
 [core]
 	excludesfile = /home/kurtosis/.gitignore_global
 [alias]
-	add = add -v
-	clone = clone -v --progress --recursive
-	fetch = fetch -v --progress
-	push = push -v --progress
-	pull = pull -v --progress
-	status = status -v
-	unstage = rm -r --cached
-	#unstage = reset HEAD
+#   unstage = reset HEAD
+    unstage = rm -r --cached
+    pull = pull -u
+    push = push -u
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3

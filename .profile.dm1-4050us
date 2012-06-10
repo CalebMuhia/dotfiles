@@ -65,6 +65,7 @@ PATH="$PATH:$LESSCSS/bin"
 PATH="$PATH:$VUZE_HOME"
 PATH="$PATH:$ANOMOS_HOME"
 PATH="$PATH:$USER_SCRIPTS"
+PATH="$PATH:."
 
 # the following are automatically inserted into the system path /usr/bin by 
 # update-alternatives
@@ -77,5 +78,14 @@ PATH="$PATH:$USER_SCRIPTS"
 #PATH="$PATH:$GOBIN/pkg/tool/linux_amd64"
 #PATH="$PATH:$GOBIN/test"
 
-# enable rbenv shims and autocompletion
-eval "$(rbenv init -)"
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # enable rbenv shims and autocompletion, only needed for Bash, not ZSH (zsh has its own plugin for this)
+    eval "$(rbenv init -)"
+fi
+
+# include .aliases if it exists
+if [ -f "$HOME/.aliases" ]; then
+    . "$HOME/.aliases"
+fi
+

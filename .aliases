@@ -1,3 +1,4 @@
+# Universal Shell Aliases, should work with both Bash and ZSH.
 alias mkdir='mkdir -p'
 alias more='less -R'
 alias chown='chown -RV'
@@ -33,7 +34,3 @@ alias gf='git fetch'
 alias grv='git remote -v'
 alias grau='git remote add upstream'
 
-alias cd-android="cd ~/Projects/Google/Android/sdk/"
-alias cd-haskell-proj="cd ~/Projects/Haskell/"
-alias cd-haskell-bin="cd ~/bin/haskell/"
-alias cd-lyah="cd ~/Projects/Haskell/LYaH/"

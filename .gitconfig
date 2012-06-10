@@ -3,6 +3,8 @@
 	email = fbg111@gmail.com
 [github]
 	user = byrongibson
+[gitorious]
+	user = byrongibson
 [core]
 	excludesfile = /home/kurtosis/.gitignore_global
 [alias]

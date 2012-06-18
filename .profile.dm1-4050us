@@ -21,62 +21,10 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$PATH:$HOME/bin" PATH="$PATH:." 
 fi 
 
-# Export additional env vars
-export JAVA_HOME=/opt/java/jdk/default
-export TYPESAFE_HOME=/opt/scala/typesafe/stack/default
-export TYPESAFE_DOCS=$TYPESAFE_HOME/doc
-export SCALA_HOME=$TYPESAFE_HOME
-export SCALA_DOCS=$TYPESAFE_DOCS
-export ANT_HOME=/opt/apache/ant/default
-export CABAL_HOME=$HOME/.cabal
-export MAVEN_HOME=/opt/apache/maven/default
-export IDEA_HOME=$HOME/bin/ide/idea/default
-export ECLIPSE_HOME=$HOME/bin/ide/eclipse/default
-export ANDROID_SDK=$HOME/bin/google/android/sdk
-export ANDROID_NDK=$HOME/bin/google/android/ndk/default
-export HASKELL_HOME=/opt/haskell
-export HASKELL_GHC=$HASKELL_HOME/ghc/default
-export HASKELL_PLATFORM=$HASKELL_HOME/platform/default
-export RBENV_HOME=$HOME/bin/ruby/rbenv
-export RBENV_ROOT=$HOME/bin/ruby/rbenv
-#export GO_HOME=/opt/google/go/default
-#export GOBIN=$GO_HOME/bin
-export LESSCSS=$HOME/bin/node/node_modules/less
-export VUZE_HOME=$HOME/bin/utilities/torrent/vuze
-export ANOMOS_HOME=$HOME/bin/utilities/torrent/anomos
-export USER_SCRIPTS=$HOME/bin/scripts
-
-# to make tribler work on 12.04:
-export PYTHONPATH="$PYTHONPATH":/usr/lib/python2.7/dist-packages/wx-2.8-gtk2-unicode/
-
-# make a GNU Stow env variable so you can refer to it in ./configure $STOW/appname
-export STOW=/usr/local/stow
-
-#PATH="$PATH:/usr/lib/jvm/default-java/bin"
-PATH="$PATH:$ANT_HOME/bin"
-PATH="$PATH:$MAVEN_HOME/bin" 
-PATH="$PATH:$ECLIPSE_HOME"
-PATH="$PATH:$IDEA_HOME/bin"
-PATH="$PATH:$ANDROID_SDK/tools"
-PATH="$PATH:$ANDROID_SDK/platform-tools"
-PATH="$PATH:$ANDROID_NDK/"
-PATH="$PATH:$RBENV_ROOT/bin"
-PATH="$PATH:$LESSCSS/bin"
-PATH="$PATH:$VUZE_HOME"
-PATH="$PATH:$ANOMOS_HOME"
-PATH="$PATH:$USER_SCRIPTS"
-PATH="$PATH:."
-
-# the following are automatically inserted into the system path /usr/bin by 
-# update-alternatives
-#PATH="$PATH:$SCALA_HOME/bin"
-#PATH="$PATH:$TYPESAFE_STACK/bin"
-#PATH="$PATH:$HASKELL_GHC/bin"
-#PATH="$PATH:$HASKELL_PLATFORM/bin"
-#PATH="$PATH:$GOBIN"
-#PATH="$PATH:$GOBIN/misc"
-#PATH="$PATH:$GOBIN/pkg/tool/linux_amd64"
-#PATH="$PATH:$GOBIN/test"
+# Env vars shared by Bash and Zsh
+if [ -f "$HOME/.env" ]; then
+    . "$HOME/.env"
+fi
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

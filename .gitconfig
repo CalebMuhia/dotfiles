@@ -13,9 +13,10 @@
     unstage = rm -r --cached
     pull = pull -u
     push = push -u
-    log = log --decorate --graph --oneline
-    lol = log --decorate --graph --oneline --abbrev-commit
-    lola = log --graph --decorate --oneline --abbrev-commit --all
+    log = log --decorate --graph --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all
+    lg = log --decorate --graph --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all
+    lol = log --decorate --graph --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all
+    lola = log --decorate --graph --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --all
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3

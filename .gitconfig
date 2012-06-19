@@ -14,6 +14,8 @@
     pull = pull -u
     push = push -u
     log = log --decorate --graph --oneline
+    lol = log --decorate --graph --oneline --abbrev-commit
+    lola = log --graph --decorate --oneline --abbrev-commit --all
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3

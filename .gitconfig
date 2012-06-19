@@ -13,6 +13,9 @@
     unstage = rm -r --cached
     pull = pull -u
     push = push -u
+    log = log --decorate --graph --oneline
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
+[color]
+	ui = auto

@@ -12,6 +12,7 @@ alias rsync='rsync --verbose  --progress --stats --compress --recursive --times 
 alias psaux='ps -aux'
 alias psl='psaux|more'
 alias psg='psaux|grep'
+alias df='pydf'
 
 alias lla='ls -alF --group-directories-first --color=always'
 alias ll='ls -l --group-directories-first --color=always'

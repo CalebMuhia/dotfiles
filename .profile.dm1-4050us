@@ -37,3 +37,9 @@ if [ -f "$HOME/.aliases" ]; then
     . "$HOME/.aliases"
 fi
 
+# fix UTF-8 error in Octopress
+# http://alexzeitler.com/blog/2012/01/15/rake-generate-for-octopress-fails-with-invalid-byte-sequence-in-us-ascii-argumenterror/
+LANG=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+
+

@@ -39,7 +39,15 @@ fi
 
 # fix UTF-8 error in Octopress
 # http://alexzeitler.com/blog/2012/01/15/rake-generate-for-octopress-fails-with-invalid-byte-sequence-in-us-ascii-argumenterror/
-LANG=en_US.UTF-8
-LC_ALL=en_US.UTF-8
+# https://github.com/imathis/octopress/issues/144
+# http://zanshin.net/2011/08/11/switching-to-octopress/
+# https://github.com/imathis/octopress/issues/267
+# http://pedrovanzella.com/blog/2012/03/02/migrating-wordpress-to-octopress-utf-8-woes/
+# http://www.benjiegillam.com/2011/09/octopress-utf-8-issues/
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 
 

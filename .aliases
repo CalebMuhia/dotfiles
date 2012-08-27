@@ -1,6 +1,5 @@
 # Universal Shell Aliases, should work with both Bash and ZSH.
 alias mkdir='mkdir -p'
-alias more='less -R'
 alias chown='chown -RV'
 alias chmod='chomod -RV'
 alias grep='grep --color=always'
@@ -20,8 +19,8 @@ alias ll='ls -l --group-directories-first --color=always'
 alias la='ls -A --group-directories-first --color=always'
 alias l='ls -CF --group-directories-first --color=always'
 alias llg='ls -alF --group-directories-first --color=always|grep'
-alias llm='ls -alF --group-directories-first --color=always|less -R'
-alias lll='ls -alF --group-directories-first --color=always|less -R'
+alias llm='ls -alF --group-directories-first --color=always|more -R'
+alias lll='ls -alF --group-directories-first --color=always|more -R'
 alias vm='vim'
 alias vom='vim'
 

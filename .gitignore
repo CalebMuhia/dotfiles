@@ -109,3 +109,9 @@ target/
 *.perspectivev3
 .oh-my-zsh
 git-rm*
+
+
+# # Scala/SBT/Lift #
+# ##################
+target
+

@@ -40,3 +40,4 @@ alias gf='git fetch'
 alias grv='git remote -v'
 alias grau='git remote add upstream'
 
+alias yi='yi --as=vim'

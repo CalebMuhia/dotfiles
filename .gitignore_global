@@ -5,6 +5,10 @@
 #*
 #!*.*
 
+# files with potentially sensitive info
+.gitconfig
+.gitconfig*
+
 # new and old versions of conffiles, stored by dpkg
 *.dpkg-*
 

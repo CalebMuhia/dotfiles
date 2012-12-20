@@ -1,7 +1,7 @@
 # Universal Shell Aliases, should work with both Bash and ZSH.
 alias mkdir='mkdir -p'
-alias chown='chown -RV'
-alias chmod='chomod -RV'
+alias chown='chown -Rv'
+alias chmod='chmod -Rv'
 alias grep='grep --color=always'
 alias diff='colordiff'
 alias emacs='emacs -nw'
@@ -12,7 +12,6 @@ alias psaux='ps -aux'
 alias psl='psaux|more'
 alias psg='psaux|grep'
 alias df='pydf -a -h -B'
-
 
 alias lla='ls -alF --group-directories-first --color=always'
 alias ll='ls -l --group-directories-first --color=always'

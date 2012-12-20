@@ -6,7 +6,7 @@
 [gitorious]
 	user = byrongibson
 [core]
-	excludesfile = /home/kurtosis/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = vim
 [alias]
 #   unstage = reset HEAD

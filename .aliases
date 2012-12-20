@@ -12,6 +12,7 @@ alias psaux='ps -aux'
 alias psl='psaux|more'
 alias psg='psaux|grep'
 alias df='pydf -a -h -B'
+alias more='less'
 
 alias lla='ls -alF --group-directories-first --color=always'
 alias ll='ls -l --group-directories-first --color=always'

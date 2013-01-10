@@ -4,7 +4,6 @@ alias chown='chown -Rv'
 alias chmod='chmod -Rv'
 alias grep='grep --color=always'
 alias diff='colordiff'
-alias emacs='emacs -nw'
 alias tar='tar --verbose'
 alias tmux='tmux -2'
 #alias rsync='rsync --verbose  --progress --stats --compress --recursive --times --perms --links exclude "*bak" --exclude "*~*"'
@@ -13,6 +12,13 @@ alias psl='psaux|more'
 alias psg='psaux|grep'
 alias df='pydf -a -h -B'
 alias more='less'
+
+# http://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html#Emacs-Server
+alias emacs='emacs -nw'
+alias emacsd='emacs -daemon'
+alias emacsc='emacsclient'
+
+alias yi='yi --as=vim'
 
 alias lla='ls -alF --group-directories-first --color=always'
 alias ll='ls -l --group-directories-first --color=always'
@@ -39,4 +45,3 @@ alias gf='git fetch'
 alias grv='git remote -v'
 alias grau='git remote add upstream'
 
-alias yi='yi --as=vim'

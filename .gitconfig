@@ -9,7 +9,7 @@
 	excludesfile = ~/.gitignore_global
 	editor = vim
 [alias]
-#   unstage = reset HEAD
+#   unstage = reset HEAD --
     unstage = rm -r --cached
     pull = pull -u
     push = push -u

@@ -4,7 +4,9 @@
 [github]
 	user = byrongibson
 [gitorious]
-	user = byrongibson
+    user = byrongibson
+[cloudbees]
+    user = dataalpha
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim

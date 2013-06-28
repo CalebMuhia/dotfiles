@@ -12,6 +12,7 @@
 	editor = vim
 	autocrlf = false
 	filemode = false
+	deltaBaseCacheLimit = 1G
 [alias]
 #   unstage = reset HEAD --
     unstage = rm -r --cached

@@ -14,7 +14,8 @@ alias df='pydf -a -h -B'
 alias more='less'
 
 # http://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html#Emacs-Server
-alias emacs='emacs -nw'
+alias emacsnw='emacs -nw'
+alias emacsn='emacs -nw'
 alias emacsd='emacs -daemon'
 alias emacsc='emacsclient'
 

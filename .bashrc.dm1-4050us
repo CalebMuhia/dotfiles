@@ -116,3 +116,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# enable rbenv shims and autocompletion, only needed for Bash, not ZSH (zsh has its own plugin for this)
+eval "$(rbenv init -)"

@@ -4,6 +4,10 @@
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+# Replace above line with if/then/fi for RVM compatibility
+#if [[ -n "$PS1" ]] ; then 
+#do nothing
+#fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -21,7 +25,10 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+# must have source-highlight package instaled
+# aptitude install source-highlight
+# http://www.gnu.org/software/src-highlite/source-highlight.html
+#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
@@ -69,12 +76,25 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+# configure virtualenvwrapper
+# http://mirnazim.org/writings/python-ecosystem-introduction/
+#if [ `id -u` != '0' ]; then
+#  export VIRTUALENV_USE_DISTRIBUTE=1        # <-- Always use pip/distribute
+#  export WORKON_HOME=$HOME/bin/virtualenvs       # <-- Where all virtualenvs will be stored
+#  source /usr/local/bin/virtualenvwrapper.sh
+#  export PIP_VIRTUALENV_BASE=$WORKON_HOME
+#  export PIP_RESPECT_VIRTUALENV=true
+#fi
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -85,8 +105,12 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+#if [ -f ~/.bash_aliases ]; then
+#    . ~/.bash_aliases
+#fi
+
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
 
 # enable programmable completion features (you don't need to enable

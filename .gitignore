@@ -83,7 +83,7 @@ cabal-dev
 dist
 .static-cache
 static/tmp
-.sqlite3
+*.sqlite3
 
 # # Document Types #
 # ######################
@@ -109,3 +109,9 @@ target/
 *.perspectivev3
 .oh-my-zsh
 git-rm*
+
+
+# # Scala/SBT/Lift #
+# ##################
+target
+

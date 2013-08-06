@@ -5,6 +5,10 @@
 #*
 #!*.*
 
+# files with potentially sensitive info
+.gitconfig
+.gitconfig*
+
 # new and old versions of conffiles, stored by dpkg
 *.dpkg-*
 
@@ -58,7 +62,7 @@ DEADJOE
 *.dmg
 *.gz
 *.iso
-*.jar
+#*.jar
 *.rar
 *.tar
 *.zip
@@ -100,7 +104,7 @@ identity
 
 # # Misc #
 # ########
-build
+#build
 target/
 *.pbxuser
 *.mode2v3

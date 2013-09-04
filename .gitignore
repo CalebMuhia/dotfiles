@@ -2,8 +2,8 @@
 
 # # ignore extension-less files (compiled filter)
 # #############################
-*
-!*.*
+#*
+#!*.*
 
 # new and old versions of conffiles, stored by dpkg
 *.dpkg-*
@@ -11,15 +11,6 @@
 # mount(8) records system state here, no need to store these
 blkid.tab
 blkid.tab.old
-
-# some other files in /etc that typically do not need to be tracked
-nologin
-ld.so.cache
-mtab
-.pwd.lock
-network/run
-adjtime
-lvm/cache
 
 # editor temp files
 *~
@@ -100,8 +91,6 @@ identity
 
 # # Misc #
 # ########
-build
-target/
 *.pbxuser
 *.mode2v3
 *.mode1v3
@@ -114,4 +103,4 @@ git-rm*
 # # Scala/SBT/Lift #
 # ##################
 target
-
+build

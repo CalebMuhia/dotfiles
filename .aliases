@@ -12,6 +12,8 @@ alias psl='psaux|more'
 alias psg='psaux|grep'
 alias df='pydf -a -h -B'
 alias more='less'
+alias tracert='mtr'
+alias traceroute='mtr'
 
 # http://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html#Emacs-Server
 alias emacsnw='emacs -nw'

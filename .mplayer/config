@@ -1,0 +1,8 @@
+# Write your default config options here!
+#
+
+# https://bbs.archlinux.org/viewtopic.php?id=49043
+embeddfonts=yes
+ass=yes
+
+

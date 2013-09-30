@@ -26,6 +26,8 @@
     lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     lola = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     gcm = git commit -m
+    gpom = git push origin
+    gpo = git push origin
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3

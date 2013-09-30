@@ -40,11 +40,12 @@ alias gcm='git commit -m'
 alias gcmu="git commit -m 'update'"
 alias gcau="git commit -am 'update'"
 alias gst='git status'
-alias gpom='git push origin'
-alias gpum='git pull upstream'
-alias gfum='git fetch upstream'
-alias gp='git pull'
-alias gf='git fetch'
+alias gpom='git push --all origin'
+alias gpum='git pull --all upstream'
+alias gfum='git fetch --all upstream'
+alias gp='git pull --all'
+alias gpa='git pull --all'
+alias gf='git fetch --all'
 alias grv='git remote -v'
 alias grau='git remote add upstream'
 

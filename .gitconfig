@@ -34,6 +34,9 @@
     lrb = git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
 
     gcm = git commit -m
+
+#   push all branches
+#   http://www.verious.com/qa/set-up-git-to-pull-and-push-all-branches/
     gpom = git push --all origin
     gpo = git push -all origin
     gpa = git push --all

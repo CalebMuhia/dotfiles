@@ -39,12 +39,12 @@ fi
 
 # alias 'xclip -i' to 'xclip -selection clipboard.  the former does not seem to work, at least on ubuntu 12.04'
 # http://superuser.com/questions/105375/bash-spaces-in-alias-name
-function xclip() {
-  case $* in
-    -i* ) shift 1; command xclip -selection clipboard "$@" ;;
-    * ) command xclip "$@" ;;
-  esac
-}
+#function xclip() {
+#  case $* in
+#    -i* ) shift 1; command xclip -selection clipboard "$@" ;;
+#    * ) command xclip "$@" ;;
+#  esac
+#}
 
 # fix UTF-8 error in Octopress
 # http://alexzeitler.com/blog/2012/01/15/rake-generate-for-octopress-fails-with-invalid-byte-sequence-in-us-ascii-argumenterror/

@@ -12,6 +12,8 @@ alias psl='psaux|more'
 alias psg='psaux|grep'
 alias df='pydf -a -h -B'
 alias more='less'
+alias tracert='mtr'
+alias traceroute='mtr'
 
 # http://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html#Emacs-Server
 alias emacsnw='emacs -nw'
@@ -38,11 +40,13 @@ alias gcm='git commit -m'
 alias gcmu="git commit -m 'update'"
 alias gcau="git commit -am 'update'"
 alias gst='git status'
-alias gpom='git push origin master'
-alias gpum='git pull upstream master'
-alias gfum='git fetch upstream master'
-alias gp='git pull'
-alias gf='git fetch'
+alias gpom='git push --all origin'
+alias gpum='git pull --all upstream'
+alias gfum='git fetch --all upstream'
+alias gp='git pull --all'
+alias gpa='git pull --all'
+alias gf='git fetch --all'
 alias grv='git remote -v'
 alias grau='git remote add upstream'
 
+alias bd='. ~/bin/bd -s'

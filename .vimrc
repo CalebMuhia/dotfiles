@@ -49,8 +49,6 @@ filetype off                   " required!
  " Bundle 'git://git.wincent.com/command-t.git'
  " ...
 
- " filetype plugin indent on     " required! (will be set in separate section below)
- "
  " Brief help
  " :BundleList          - list configured bundles
  " :BundleInstall(!)    - install(update) bundles
@@ -58,6 +56,9 @@ filetype off                   " required!
  " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
  "
  " see :h vundle for more details or wiki for FAQ
+ " 
+ " filetype plugin indent on     " required! (will be set in separate section below)
+ "
  " NOTE: comments after Bundle command are not allowed..
 " \"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" "
 
@@ -118,9 +119,8 @@ if has("autocmd")
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
-  "filetype plugin indent on
+  " filetype on
   filetype plugin indent on
-  filetype on
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx

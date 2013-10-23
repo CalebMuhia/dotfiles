@@ -1,3 +1,19 @@
+# Setup #######################################################################
+#
+# To run mpd under ~/.mpdconf instead of the default /etc/.mpdconf, you must
+# either change the default .mpdconf, or disable mpd from autostarting under
+# the root or mpd user and start it under your own user account:
+#
+# 1.  To change the default .mpdconf, edit /etc/default/mpd and set
+#   MPD_CONF=~/.mpdconf.  Be aware this changes the .mpdconf for all users.
+#
+# 2.  To disable mpd from autoastarting, edit /etc/default/mpd and set
+#   MPD_START=false.  Then create a start script and put it in your home 
+#   directory, and either manually invoke it after you login, or add it 
+#   to your Startup Applications list:
+#
+#   https://github.com/byrongibson/scripts/blob/master/mpd/mpd-start.sh
+#
 # See the mpd.conf man page for a more detailed description of each parameter.
 #
 # Files and directories #######################################################
@@ -30,9 +46,9 @@ playlist_directory		"/home/kurtosis/Music/Playlists"
 # MPD to accept files over ipc socket (using file:// protocol) or streaming
 # files over an accepted protocol.
 #
-#db_file			    "/var/lib/mpd/tag_cache"
+#db_file			"/var/lib/mpd/tag_cache"
+db_file			    "/home/kurtosis/.mpd/mpd.db"
 #db_file			"/home/kurtosis/.mpd/tag_cache"
-db_file			"/home/kurtosis/.mpd/mpd.db"
 # 
 # These settings are the locations for the daemon log files for the daemon.
 # These logs are great for troubleshooting, depending on your log_level
@@ -90,7 +106,7 @@ sticker_file       "/home/kurtosis/.mpd/sticker.sql"
 # to have mpd listen on every address
 #
 # For network
-bind_to_address		"localhost"
+bind_to_address		"0.0.0.0"
 #
 # And for Unix Socket
 #bind_to_address		"/var/run/mpd/socket"
@@ -145,7 +161,7 @@ auto_update    "yes"
 # If this setting is set to "yes", MPD will discover audio files by following 
 # symbolic links outside of the configured music_directory.
 #
-follow_outside_symlinks	"yes"
+follow_outside_symlinks	"no"
 #
 # If this setting is set to "yes", MPD will discover audio files by following
 # symbolic links inside of the configured music_directory.
@@ -197,6 +213,18 @@ input {
 #
 ###############################################################################
 
+
+# Remote Playlist Plugin ######################################################
+# 
+# http://www.musicpd.org/doc/user/ch03s08.html
+# 
+playlist_plugin {
+    name "m3u"
+    enabled "true"
+}
+#
+# #############################################################################
+
 # Audio Output ################################################################
 #
 # MPD supports various audio output types, as well as playing through multiple 
@@ -209,10 +237,6 @@ input {
 #
 # An example of an ALSA output:
 #
-audio_output {
-	type		"pulse"
-	name		"PulseAudio Device"
-}
 #audio_output {
 #	type		"alsa"
 #	name		"ALSA Device"
@@ -281,12 +305,12 @@ audio_output {
 #
 # An example of a pulseaudio output (streaming to a remote pulseaudio server)
 #
-#audio_output {
-#	type		"pulse"
-#	name		"My Pulse Output"
+audio_output {
+	type		"pulse"
+	name		"My Pulse Output"
 #	server		"remote_server"		# optional
 #	sink		"remote_server_sink"	# optional
-#}
+}
 #
 ## Example "pipe" output:
 #
@@ -418,6 +442,8 @@ filesystem_charset		"UTF-8"
 id3v1_encoding			"UTF-8"
 #
 ###############################################################################
+
+
 # SIDPlay decoder #############################################################
 #
 # songlength_database:
@@ -442,4 +468,38 @@ id3v1_encoding			"UTF-8"
 #
 ###############################################################################
 
->>>>>>> 989efafe9619c3d50d93178a0f8f7650eafc4c4a
+
+# Spotify Playlists ##########################################################
+#
+# http://www.musicpd.org/doc/user/ch05s02.html#idp5565536
+#
+# Plays Spotify tracks using the despotify library. The despotify plugin uses 
+# a spt:// URI and a Spotify URL. So for example, you can add a song with:
+# 
+# mpc add spt://spotify:track:5qENVY0YEdZ7fiuOax70x1
+#
+# You need a Spotify premium account to use this plugin, and you need to setup 
+# username and password in the configuration file.  You must also compile 
+# mpd against libspotify, which it isn't by default either in the gmpc ppa 
+# or Ubuntu repos.
+#
+# The configuration settings are global since the despotify playlist plugin use 
+# the same settings.
+# 
+#despotify {
+#
+# Sets up the Spotify username (required)
+#
+#   despotify_user          "" 
+#
+# Sets up the Spotify password (required)
+#
+#   despotify_password      ""
+#
+# Set up if high bitrate should be used for Spotify tunes. High bitrate sounds 
+# better but slow systems can have problems with playback (default yes).#
+#
+#   despotify_high_bitrate   "no"
+#}
+#
+###############################################################################

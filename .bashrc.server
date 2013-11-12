@@ -119,3 +119,11 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+
+
+# Old Powerline for ZSH config
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+# Enable new Python Powerline for bash
+#. ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh

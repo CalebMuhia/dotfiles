@@ -114,8 +114,9 @@ bind_to_address		"0.0.0.0"
 #
 # This setting is the TCP port that is desired for the daemon to get assigned
 # to.
+# Default is 6600 but mopidy is using that.  `ncmpcpp -p 6601`
 #
-port				"6600"
+port				"6601"
 #
 # This setting controls the type of information which is logged. Available 
 # setting arguments are "default", "secure" or "verbose". The "verbose" setting

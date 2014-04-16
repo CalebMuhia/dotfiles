@@ -49,4 +49,5 @@ alias gf='git fetch --all'
 alias grv='git remote -v'
 alias grau='git remote add upstream'
 
+# https://github.com/vigneshwaranr/bd
 alias bd='. ~/bin/bd -s'

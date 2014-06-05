@@ -107,7 +107,11 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #fi
 
 if [ -f ~/.aliases ]; then
-    . ~/.aliases
+    source ~/.aliases
+fi
+
+if [ -f ~/.env ]; then
+    . ~/.env
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -117,3 +121,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# enable rbenv shims and autocompletion, only needed for Bash, not ZSH (zsh has its own plugin for this)
+eval "$(rbenv init -)"
+
+# start ssh-agent and gpg-agent
+eval `keychain --eval ~/.ssh/keys/github/id_rsa`

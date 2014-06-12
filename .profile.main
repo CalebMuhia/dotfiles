@@ -47,12 +47,12 @@ fi
 # alias 'xclip -i' to 'xclip -selection clipboard.  the former does 
 # not seem to work, at least on ubuntu 12.04'
 # http://superuser.com/questions/105375/bash-spaces-in-alias-name
-function xclip() {
-  case $* in
-    -i* ) shift 1; command xclip -selection clipboard "$@" ;;
-    * ) command xclip "$@" ;;
-  esac
-}
+#function xclip() {
+#  case $* in
+#    -i* ) shift 1; command xclip -selection clipboard "$@" ;;
+#    * ) command xclip "$@" ;;
+#  esac
+#}
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then

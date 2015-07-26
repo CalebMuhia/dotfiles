@@ -26,12 +26,12 @@ set nocompatible
 " load Vundle and all bundles
 filetype off                   " required!
 
- set rtp+=~/.vim/bundle/vundle/
+ set rtp+=~/.vim/bundle/Vundle.vim
  call vundle#begin()
 
  " let Vundle manage Vundle
  " required! 
- Bundle 'gmarik/Vundle.vim'
+ Plugin 'gmarik/Vundle.vim'
 
  " My Bundles here:
  "

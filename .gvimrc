@@ -1,1 +1,0 @@
-/home/kurtosis/.vim/.gvimrc

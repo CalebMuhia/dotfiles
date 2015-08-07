@@ -14,6 +14,8 @@ alias df='pydf -a -h -B'
 alias more='less'
 alias tracert='mtr'
 alias traceroute='mtr'
+alias logout='sudo pkill -u $USER'
+alias log-out='sudo pkill -u $USER'
 
 # http://www.gnu.org/software/emacs/manual/html_node/emacs/Emacs-Server.html#Emacs-Server
 alias emacsnw='emacs -nw'
@@ -48,6 +50,11 @@ alias gpa='git pull --all'
 alias gf='git fetch --all'
 alias grv='git remote -v'
 alias grau='git remote add upstream'
+# push tracking branch to remote tracking branch
+# ex:  git push [remotename] [trackingbranch]:[remotetrackingbranch]
+# ex:  git push origin precise:precise
+# ex:  git push origin v2.0.0:v2.0.0
+alias gptr='git push origin $1:$2' 
 
 # https://github.com/vigneshwaranr/bd
 alias bd='. ~/bin/bd -s'

@@ -121,6 +121,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# add Bash Powerline
+# https://powerline.readthedocs.org/en/latest/usage/shell-prompts.html
+. /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
+
+
 # enable rbenv shims and autocompletion, only needed for Bash, not ZSH (zsh has its own plugin for this)
 eval "$(rbenv init -)"
 

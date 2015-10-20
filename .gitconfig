@@ -8,9 +8,7 @@
 [github]
 	user = byrongibson
 [gitorious]
-    user = byrongibson
-[cloudbees]
-    user = dataalpha
+  user = byrongibson
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
@@ -18,32 +16,33 @@
 	filemode = false
 	deltaBaseCacheLimit = 1G
 [alias]
-#   unstage = reset HEAD --
-    unstage = rm -r --cached
-    pull = pull -u
-    push = push -u
+# unstage = reset HEAD --
+  unstage = rm -r --cached
+  pull = pull -u
+  push = push -u
+  
+  log = tig
+# log = !tig
+# log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
-    log = !tig
-#   log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+# lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+# lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-#   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-#   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lola = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
-    lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    lola = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  # view all local branches committed but not yet pushed to remote/origin
+  # http://www.thehazymind.com/blog/git-push-all-local-branches-to-origin/
+  lrb = git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
 
-    # view all local branches committed but not yet pushed to remote/origin
-    # http://www.thehazymind.com/blog/git-push-all-local-branches-to-origin/
-    lrb = git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+  gcm = git commit -m
 
-    gcm = git commit -m
-
-#   push all branches
-#   http://www.verious.com/qa/set-up-git-to-pull-and-push-all-branches/
-    gpom = git push --all origin
-    gpo = git push -all origin
-    gpa = git push --all
+# push all branches
+# http://www.verious.com/qa/set-up-git-to-pull-and-push-all-branches/
+  gpom = git push --all origin
+  gpo = git push -all origin
+  gpa = git push --all
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3

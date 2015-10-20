@@ -75,5 +75,15 @@ alias sudo="nocorrect sudo"
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
+# add Powerline status bar
+# https://powerline.readthedocs.org/en/latest/usage/shell-prompts.html
+. /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+
+# enable rbenv shims and autocompletion, only needed for Bash, not ZSH (zsh has its own plugin for this)
+eval "$(rbenv init -)"
+
+# start ssh-agent and gpg-agent
+eval `keychain --eval ~/.ssh/keys/github/id_rsa`
+
 # check for updates, init shell
 source $ZSH/oh-my-zsh.sh

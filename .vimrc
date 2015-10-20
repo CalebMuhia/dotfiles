@@ -193,6 +193,7 @@ set pastetoggle=<F8>
 "set wildmenu					" ...
 "set wildmode=list:longest		" ...
 set si                          " smart indent http://stackoverflow.com/questions/3626203/text-editor-for-scala
+set ffs=unix,dos                " http://stackoverflow.com/questions/5843495/what-does-m-character-mean-in-vim
 runtime ftplugin/man.vim        " Turn on Man pages
 
 " Set colors & scheme

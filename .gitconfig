@@ -1,6 +1,10 @@
 [user]
 	name = Byron Gibson
-	email = fbg111@gmail.com
+    email = fbg111@gmail.com
+[mirror]
+    name = Byron Gibson
+    email = byron@mirror.co
+    user = byron
 [github]
 	user = byrongibson
 [gitorious]
